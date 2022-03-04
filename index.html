@@ -3,6 +3,9 @@
   <head>
     <title>My Personal Website</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap" rel="stylesheet">
   </head>
   <body>
     <ul class="social_media">
@@ -23,12 +26,17 @@
                 Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.
             </div>
         </div>
-        <div class="column-image">
-        <ul class="image__slides"></ul>
-            <span class="dot" id="dot-1"></span>
+        <ul id="column-image">
+            <li class="slide active"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+        </ul>
+        <div class="dots">
+            <span class="dot active--dot" id="dot-1"></span>
             <span class="dot" id="dot-2"></span>
             <span class="dot" id="dot-3"></span>
         </div>
+         
     </div>
     <script src="script.js"></script>
   </body>

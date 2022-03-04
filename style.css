@@ -8,6 +8,7 @@ body {
 body, html, .container{
     height: 100%;
 }
+
 .social_media{
     display: flex;
     position: fixed;
@@ -27,40 +28,77 @@ body, html, .container{
 .column-text{
     flex-basis: 65%;
     flex-shrink: 0;
-    background-color: cadetblue;
+    background-color: #eee;
     padding-left: 20px;
     display: flex;
     flex-direction: column;
+}
+.titles{
+    font-family: 'Poppins';
 }
 .text__title{
     font-size: 80px;
     margin: 0;
     line-height: 100%;
     padding-bottom: 10px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 .text__subtitle{
     margin: 0;
+    font-weight: 800;
+    text-transform: uppercase;
 }
-.image__slides{
+#column-image{
+    flex-basis: 35%;
     list-style-type: none;
     margin: 0;
     padding: 0;
+    max-height: 100%;
+}
+.slide{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-size: cover;
+}
+.active{
+	display: block;
+	z-index: 2;
+}
+.slide:nth-of-type(1){
+    background-image: url('images/1.jpg');
+}
+.slide:nth-of-type(2){
+    background-image: url('images/2.jpg');
+}
+.slide:nth-of-type(3){
+    background-image: url('images/3.jpg');
 }
 
 .dots{
     display: flex;
+    position: fixed;
+    bottom: calc(20px);
+    right: calc(20px);
 }
 .dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin-bottom: 5px;
-    
-    background-color: #bbb;
+    background-color: #eee;
     border-radius: 50%;
     display: flex;
-    transition: background-color 0.6s ease;
+    transition: all 0.6s ease;
+    box-shadow: 1px 1px 5px 2px #555;
   }
+.active--dot {
+    background-color: #444;
+    box-shadow: 0 0 5px 2px #eee;
+    transition: all 0.6s ease;
+}
 
 @media only screen and (max-width: 900px){
     .container{
@@ -74,6 +112,7 @@ body, html, .container{
     }
     .titles{
         width: 70%;
+        padding-top:20px;
     }
     .description{
         padding-bottom: 100px;
